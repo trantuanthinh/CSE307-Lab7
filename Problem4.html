@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gallery</title>
+    <style>
+        .container {
+            flex: 1;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .listContainer {
+            flex: 1;
+            text-align: center;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .product {
+            padding: 20px;
+        }
+
+        .container img:hover {
+            width: 300px;
+            height: 300px;
+        }
+    </style>
+
+    <script>
+        function ExapandImg(imgs) {
+            var expandImg = document.getElementById("expandedImg");
+            var imgText = document.getElementById("imgtext");
+            expandImg.src = imgs.src;
+            imgText.innerHTML = imgs.alt;
+            expandImg.parentElement.style.display = "block";
+        }
+    </script>
+</head>
+
+<body>
+    <div class="container" style="background-color: aquamarine">
+        <h1>Tabbed Image Gallery</h1>
+        <p>Click on the images below:</p>
+        <div class="listContainer">
+            <div class="product">
+                <img width="250" height="250" src="./img/Davinci.png" alt="Davinci" onclick="ExapandImg(this)" />
+            </div>
+
+            <div class="product">
+                <img width="250" height="250" src="./img/EnglishForTech.jpg" alt="EnglishForTech"
+                    onclick="ExapandImg(this)" />
+            </div>
+
+            <div class="product">
+                <img width="250" height="250" src="./img/harrypotter.png" alt="harrypotter"
+                    onclick="ExapandImg(this)" />
+            </div>
+        </div>
+    </div>
+
+    <div class="listContainer">
+        <span style="position: fixed;color: red; font-size: 35px;
+            right: 15px;cursor: pointer" onclick="this.parentElement.style.display='none'">&times;</span>
+        <div id="imgtext"></div>
+        <img id="expandedImg" style="width: 200" />
+    </div>
+</body>
+
+</html>

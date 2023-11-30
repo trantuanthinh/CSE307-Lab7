@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>querySelectorAll() Method</title>
+    <script>
+        function Change() {
+            const paragraphList = document.querySelectorAll(".paragraph");
+            const firstParagraph = document.querySelector(".paragraph");
+
+            firstParagraph.style.backgroundColor = "yellow";
+            for (let i = 0; i < paragraphList.length; i++) {
+                paragraphList[i].style.border = "solid green 3px";
+            }
+
+            const linkList = document.querySelectorAll("a");
+            for (let i = 0; i < linkList.length; i++) {
+                linkList[i].style.border = "solid red 3px";
+            }
+
+            const titleList = document.querySelectorAll(".title");
+            for (let i = 0; i < titleList.length; i++) {
+                titleList[i].style.color = "orange";
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <p class="paragraph" style="background-color: aquamarine;font-size: 20px;border: solid black 1px;">
+        This is the first paragraph with class "example"
+    </p>
+    <p class="paragraph" style="background-color: aquamarine;font-size: 20px;border: solid black 1px;">
+        Another paragraph with class "example"
+    </p>
+    <p>This is a regular paragraph</p>
+    <a href="#">Link with target atribute</a>
+    <a href="#">Link with target atribute</a>
+    <h1 class="title">Title 1</h1>
+    <h2 class="title">Title 2</h2>
+    <button onclick="Change()">Change</button>
+</body>
+
+</html>

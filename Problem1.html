@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Replace all href values</title>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const list = document.querySelectorAll(".website");
+            for (let i = 0; i < list.length; i++) {
+                list[i].href = "https://www.w3schools.com/js/default.asp";
+            }
+        });
+    </script>
+</head>
+
+<body>
+    <h1>Replace all href values</h1>
+    <div style="display: flex; flex-direction: column">
+        <a class="website" href="">Website 1</a>
+        <a class="website" href="">Website 2</a>
+        <a class="website" href="">Website 3</a>
+    </div>
+</body>
+
+</html>

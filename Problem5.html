@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alert Messages</title>
+    <style>
+        .alert {
+            padding: 10px;
+            color: white;
+            margin: 10px;
+        }
+
+        .close {
+            margin-left: 15px;
+            color: black;
+            font-weight: bold;
+            float: right;
+            font-size: 22px;
+            line-height: 20px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Alert Messagess</h1>
+    <p>Click on the "x" symbol to close the alert message.</p>
+
+    <div class="alert" style="background-color: red">
+        <span class="close" onclick="this.parentElement.style.display='none';">&times;</span>
+        <strong>Danger!</strong> Indicates a dangerous or potentially
+        negative action.
+    </div>
+
+    <div class="alert" style="background-color: green">
+        <span class="close" onclick="this.parentElement.style.display='none';">&times;</span>
+        <strong>Success!</strong> Indicates a successful or positive action.
+    </div>
+
+    <div class="alert" style="background-color: blue">
+        <span class="close" onclick="this.parentElement.style.display='none';">&times;</span>
+        <strong>Info!</strong> Indicates a neutral informative change or
+        action.
+    </div>
+
+    <div class="alert" style="background-color: orange">
+        <span class="close" onclick="this.parentElement.style.display='none';">&times;</span>
+        <strong>Warning!</strong> Indicates a warning that might need
+        attention.
+    </div>
+</body>
+
+</html>
